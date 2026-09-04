@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/app/actions/$Actoins.ts.template", "src/apis/$Apis.ts.template"  ],
   "exclude": ["node_modules"]
 }
