@@ -3,7 +3,7 @@ import type { $Store } from "@/types/$Types";
 import { useContext } from "react";
 import { useStore } from "zustand";
 
-export const use$Store = <T>(selector: (store: $Store ) => T): T => {
+export const use$Store = <T>(selector: (store: $Store) => T): T => {
   const $StoreContext = useContext($StoreContext);
 
   if (!$StoreContext) {
@@ -12,4 +12,3 @@ export const use$Store = <T>(selector: (store: $Store ) => T): T => {
 
   return useStore($StoreContext, selector);
 };
-

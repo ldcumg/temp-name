@@ -13,12 +13,9 @@ interface ZustandStoreProviderProps {
 export const ZustandStoreProvider = ({ children }: ZustandStoreProviderProps) => {
   const $StoreRef = useRef<RegisterStoreApi>(null);
 
-
   if (!$StoreRef.current) {
     $StoreRef.current = create$Store();
   }
 
-  return (
-        <$StoreContext.Provider value={$StoreRef.current}>{children}</$StoreContext.Provider>
-  );
+  return <$StoreContext.Provider value={$StoreRef.current}>{children}</$StoreContext.Provider>;
 };

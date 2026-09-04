@@ -1,9 +1,9 @@
 ---
 name: Feature Request Template
 about: 기능 추가 이슈 템플릿
-title: '[Feat] '
+title: "[Feat] "
 labels: 기능 개발
-assignees: ''
+assignees: ""
 ---
 
 ## 어떤 기능인가요?

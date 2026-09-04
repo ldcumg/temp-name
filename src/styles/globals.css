@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme {}
+@theme {
+}
 
-@layer base {}
+@layer base {
+}
 
-@layer components {}
+@layer components {
+}
 
-@layer utilities {}
+@layer utilities {
+}

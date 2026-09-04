@@ -10,5 +10,3 @@ export const use$Query = ({ $ }: $Params) => {
     queryFn: () => $Api({ $, $ }),
   });
 };
-
-
