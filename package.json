@@ -9,7 +9,13 @@
     "lint": "eslint",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "test:coverage": "jest --coverage"
+    "test:changed": "jest --changedOnly",
+    "test:coverage": "jest --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepare": "husky"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -20,26 +26,48 @@
     "react-dom": "19.2.8"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@chromatic-com/storybook": "^5.3.1",
+    "@playwright/test": "^1.63.0",
+    "@storybook/addon-a11y": "^10.6.0",
+    "@storybook/addon-docs": "^10.6.0",
+    "@storybook/addon-vitest": "^10.6.0",
+    "@storybook/nextjs": "10.6.0",
+    "@storybook/nextjs-vite": "^10.6.0",
+    "@storybook/react": "10.6.0",
+    "@tailwindcss/postcss": "^4.3.3",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/jest": "^30.0.0",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitest/browser-playwright": "latest",
+    "@vitest/coverage-v8": "latest",
     "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
+    "eslint": "^10.10.0",
     "eslint-config-next": "16.3.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-storybook": "^10.6.0",
+    "husky": "^9.1.7",
     "jest": "^30.5.1",
     "jest-environment-jsdom": "^30.5.1",
     "jest-fixed-jsdom": "^0.0.11",
+    "playwright": "latest",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",
-    "tailwindcss": "^4",
+    "storybook": "10.6.0",
+    "tailwindcss": "^4.3.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5"
+    "typescript": "^7.0.2",
+    "vite": "latest",
+    "vitest": "latest"
   },
-  "packageManager": "pnpm@12.3.4+sha512.961aa41fb077da3a04a441d9f8e15ebc0c96da8ef710b2eb67bf9ee7cb0610eabd48f1fd85f51cffe73846785fa0f87c56a3a872a1d893f8446741b5cce45457"
+  "packageManager": "pnpm@12.3.4+sha512.961aa41fb077da3a04a441d9f8e15ebc0c96da8ef710b2eb67bf9ee7cb0610eabd48f1fd85f51cffe73846785fa0f87c56a3a872a1d893f8446741b5cce45457",
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
 }
