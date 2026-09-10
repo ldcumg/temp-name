@@ -4,4 +4,5 @@ const BASE_URL_V1 = `${BASE_URL}/api/v1` as const;
 
 export const $_API_URL = Object.freeze({
   $: `${BASE_URL_V1}/`,
+  postDetail: (id) => `${BASE_URL_V1}/postDetail/${id}`,
 } as const);
