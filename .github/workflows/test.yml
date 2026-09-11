@@ -71,6 +71,8 @@ jobs:
     steps:
       - name: Github Repository 파일 불러오기
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: pnpm 설치 및 설정
         uses: pnpm/action-setup@v4
